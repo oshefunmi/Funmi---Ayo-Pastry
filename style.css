@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: serif;
+}
+
+#logo{
+    width: 50px;
+    border-radius: 50% ;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+#logo, #go{
+    display: flex;
+    flex-direction: row;
+}
+
+
+header {
+    padding: 5px;
+    background-color: rgb(255, 146, 240);
+}
+
+header h1 {
+    margin: 5px;
+    color: rgb(36, 0, 29);
+    font: size 0.5em;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger{
+    display: none;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-right: 20px;
+}
+
+.elem {
+    list-style-type: none;
+}
+
+.link {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(85, 34, 85);
+}
+
+section{
+    padding: 5%;
+    margin: 2%;
+    text-align: center;
+    word-spacing: 5%;
+}
+
+@media screen and (max-width: 700px) {
+
+    .items{
+        display: none;
+        background-color: rgba(255, 146, 250, 0.8);
+        width: 100vw;
+        text-align: center;
+        margin-right: 0px;
+    }
+    
+    .burger{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5px;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .burger span{
+        height: 5px;
+        width: 30px;
+        background-color: rgb(100, 44, 91);
+    }
+
+    .burger span:not(:first-child){
+        margin-top: 5px;
+    }
+
+    .burger:hover{
+        background-color: rgb(255, 157, 247);
+        border-radius: 3px;
+        border: 1px solid rgb(44, 0, 38);
+    }
+
+    .elem{
+        min-width: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .link{
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .link:hover{
+        color: rgb(0, 92, 5);
+        background-color:  rgb(255, 157, 247);
+        transition: all 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .display-nav{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 48px;
+        right: 0px;
+        transition: all 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+}
+
+footer{
+    text-align: center;
+}
